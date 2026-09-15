@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COURT — Basketball Hub</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#080808;color:#fff;line-height:1.5}
+a{text-decoration:none;color:inherit}
+nav{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 7%;background:#0d0d0d;border-bottom:1px solid #222;position:sticky;top:0;z-index:10}
+.logo{font-size:28px;font-weight:900;letter-spacing:2px}.logo span{color:#ff6a00}
+nav ul{display:flex;gap:28px;list-style:none;color:#bbb;font-size:14px;font-weight:bold}
+nav li:hover{color:#ff6a00;cursor:pointer}
+.hero{min-height:570px;padding:90px 7%;display:flex;align-items:center;background:radial-gradient(circle at 75% 35%,#44200d 0,#18100b 22%,#080808 55%);position:relative;overflow:hidden}
+.hero:after{content:"🏀";position:absolute;right:7%;font-size:330px;opacity:.09;transform:rotate(-18deg)}
+.hero-content{max-width:650px;position:relative;z-index:1}
+.kicker{color:#ff6a00;font-weight:800;letter-spacing:3px;font-size:13px;margin-bottom:14px}
+h1{font-size:clamp(54px,8vw,100px);line-height:.88;text-transform:uppercase;font-weight:950}
+h1 span{color:#ff6a00}
+.hero p{color:#bbb;max-width:560px;margin:25px 0;font-size:18px}
+.btn{display:inline-block;background:#ff6a00;padding:14px 24px;border-radius:8px;font-weight:800;margin-right:10px}.btn.alt{background:#1d1d1d;border:1px solid #333}
+section{padding:70px 7%}.section-title{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px}.section-title h2{font-size:38px}.section-title p{color:#888}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#111;border:1px solid #242424;border-radius:14px;overflow:hidden;transition:.25s}.card:hover{transform:translateY(-5px);border-color:#ff6a00}
+.card-top{height:170px;background:linear-gradient(135deg,#252525,#101010);display:flex;align-items:center;justify-content:center;font-size:85px}
+.card-body{padding:20px}.tag{font-size:11px;color:#ff6a00;font-weight:800;letter-spacing:1px}.card h3{font-size:22px;margin:7px 0}.muted{color:#888;font-size:14px}
+.scoreboard{background:#111;border:1px solid #252525;border-radius:14px;padding:25px}
+.game{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:20px 5px;border-bottom:1px solid #242424}.game:last-child{border:0}
+.team{text-align:center;font-weight:800}.team b{display:block;font-size:30px}.vs{color:#777;font-size:12px;font-weight:bold}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.stat{background:#111;border:1px solid #242424;border-radius:12px;padding:24px;text-align:center}.stat strong{font-size:36px;color:#ff6a00;display:block}.stat span{color:#888;font-size:13px}
+footer{padding:35px 7%;border-top:1px solid #222;color:#777;text-align:center}
+@media(max-width:750px){nav ul{display:none}.hero{padding-top:65px}.grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}section{padding:50px 6%}.game{grid-template-columns:1fr 60px 1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">COURT<span>.</span></div>
+  <ul><li>HOME</li><li>NEWS</li><li>SPIELE</li><li>SPIELER</li><li>TEAMS</li></ul>
+</nav>
+
+<header class="hero">
+  <div class="hero-content">
+    <div class="kicker">THE BASKETBALL HUB</div>
+    <h1>LIVE THE<br><span>GAME.</span></h1>
+    <p>Deine Basketball-Website für News, Stars, Spiele und Statistiken. Alles rund um den Sport, den wir lieben.</p>
+    <a class="btn" href="#spiele">SPIELE ANSEHEN</a>
+    <a class="btn alt" href="#news">NEWS</a>
+  </div>
+</header>
+
+<section id="news">
+  <div class="section-title"><div><div class="kicker">LATEST</div><h2>Top News</h2></div><p>Aktuelle Basketball-Themen</p></div>
+  <div class="grid">
+    <article class="card"><div class="card-top">🏀</div><div class="card-body"><div class="tag">NBA</div><h3>Die neue Saison steht vor der Tür</h3><p class="muted">Teams bereiten sich auf die nächste große NBA-Saison vor.</p></div></article>
+    <article class="card"><div class="card-top">🔥</div><div class="card-body"><div class="tag">PLAYERS</div><h3>Die Stars, auf die alle schauen</h3><p class="muted">Von erfahrenen Superstars bis zu den nächsten großen Talenten.</p></div></article>
+    <article class="card"><div class="card-top">🏆</div><div class="card-body"><div class="tag">BASKETBALL</div><h3>Was macht ein gutes Team aus?</h3><p class="muted">Defense, Teamplay und Mentalität entscheiden auf dem Court.</p></div></article>
+  </div>
+</section>
+
+<section id="spiele">
+  <div class="section-title"><div><div class="kicker">MATCH CENTER</div><h2>Spiele</h2></div></div>
+  <div class="scoreboard">
+    <div class="game"><div class="team"><b>🏀</b>LAKERS</div><div class="vs">VS<br>20:30</div><div class="team"><b>🏀</b>WARRIORS</div></div>
+    <div class="game"><div class="team"><b>🏀</b>CELTICS</div><div class="vs">VS<br>01:00</div><div class="team"><b>🏀</b>BUCKS</div></div>
+    <div class="game"><div class="team"><b>🏀</b>NUGGETS</div><div class="vs">VS<br>03:00</div><div class="team"><b>🏀</b>SUNS</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title"><div><div class="kicker">LEGENDS & STARS</div><h2>Player Stats</h2></div></div>
+  <div class="stats">
+    <div class="stat"><strong>27.1</strong><span>POINTS / GAME</span><small> LEAGUE LEADER</small></div>
+    <div class="stat"><strong>8.2</strong><span>REBOUNDS / GAME</span></div>
+    <div class="stat"><strong>7.4</strong><span>ASSISTS / GAME</span></div>
+    <div class="stat"><strong>38.1%</strong><span>3PT SHOOTING</span></div>
+  </div>
+</section>
+
+<footer>© 2026 COURT. — Basketball starts here.</footer>
+</body>
+</html>
